@@ -2,7 +2,7 @@
 
 WIP bot to add a vote to reboot devious (minecraft community) servers
 
-##How to install and run
+## How to install and run
 
 - install node at https://nodejs.org/en/download/   (latest)
 - clone this project into a folder
