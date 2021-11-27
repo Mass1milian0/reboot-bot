@@ -1,6 +1,7 @@
 require('dotenv').config()
 require('./register-commands')
 const axios = require('axios').default;
+const MCutil = require('minecraft-server-util');
 const fs = require('fs')
 const ampapi = require("@cubecoders/ampapi");
 const { Client, Collection, Intents } = require("discord.js")
@@ -31,18 +32,24 @@ client.on('interactionCreate', async interaction => {
         }
     }
     if (interaction.isSelectMenu()) {
-        
-        //console.log(interaction.values[0]);
-        await interaction.update({ content: interaction.values[0] + " has been selected for reboot, initiating vote!", components: [], fetchReply: true });
+        const values = interaction.values.toString().split(',')
+        await interaction.update({ content: values[0] + " has been selected for reboot, initiating vote!", components: [], fetchReply: true });
+        let status = {}
+        try {
+            status = await MCutil.statusFE01(values[1], Number(values[2]))
+        } catch (error) {
+            status.players = {online: 5}
+        }
         await interaction.deleteReply();
-        let followup =await interaction.followUp('Vote for ' + interaction.values[0] + ' reboot! (1 minute expire!)');
-        //console.log(followup)
+        let followup = await interaction.followUp('Vote for ' + values[0] + ' reboot! ' + status.players.online + ' vote(s) needed for reboot! (1 minute expire!)');
         followup.react("✅")
         setTimeout(async () => {
-            await followup.edit("vote has ended!")
             const votes = followup.reactions.cache.get('✅').count - 1
-            console.log();
-        }, 5*1000);
+            await followup.edit("vote has ended with: " + votes + " vote(s) of the " + status.players.online + " needed for the reboot!")
+            if (votes >= status.players.online) {
+                interaction.followUp("Rebooting " + values[0] + " please wait")
+            }
+        }, 10*1000);
     }
 })
 client.login(process.env.DISCORD_TOKEN)

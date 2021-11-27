@@ -14,27 +14,27 @@ module.exports = {
                         {
                             label: 'Cave factory',
                             description: 'reboots cave factory',
-                            value: 'cavefactory',
+                            value: 'cavefactory,cavefactory.devious.gg,25569',
                         },
                         {
                             label: 'Enigmatica 6',
                             description: 'reboots enigmatica 6',
-                            value: 'enigmatica6',
+                            value: 'enigmatica6,e6.devious.gg,25575',
                         },
                         {
                             label: 'MedievalMC',
                             description: 'reboots medievalMC',
-                            value: 'MedievalMC',
+                            value: 'MedievalMC,medieval.devious.gg,25567',
                         },
-
                         {
                             label: 'Ragnamod 6',
                             description: 'reboots ragnamod 6',
-                            value: 'ragnamod6',
-                        }, {
+                            value: 'ragnamod6,r6.devious.gg,25588',
+                        },
+                        {
                             label: 'Stacia Expert',
                             description: 'reboots stacia expert',
-                            value: 'stacia',
+                            value: 'stacia,stacia.devious.gg,-1',
                         },
                     ]),
             );
