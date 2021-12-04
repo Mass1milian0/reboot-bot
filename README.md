@@ -25,11 +25,15 @@ MIN_VOTES=
 GLOBAL_COOLDOWN_SECONDS=
 ```
 DISCORD_TOKEN is the bot discord token
+
 AMP_USER is the AMP username
+
 AMP_PASSWORD is the AMP password
+
 AMPIP is the AMP ip address + port, example: 127.0.0.1:8080
 
 MIN_VOTES is the minimum number of votes to be used when servers are offline or have 0 players
+
 GLOBAL_COOLDOWN_SECONDS is the number in seconds of how much time should the bot sleep for
 
 ## Updating
