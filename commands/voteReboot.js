@@ -12,29 +12,34 @@ module.exports = {
                     .setPlaceholder('Select a server to reboot')
                     .addOptions([
                         {
-                            label: 'Cave factory',
-                            description: 'reboots cave factory',
-                            value: 'Cave factory,cavefactory.devious.gg,25569,MCCaveFactory',
+                            label: 'Pixelmon',
+                            description: 'reboots Pixelmon',
+                            value: 'Pixelmon,77.68.118.63,25568,Pixelmon',
                         },
                         {
                             label: 'Enigmatica 6',
-                            description: 'reboots enigmatica 6',
-                            value: 'Enigmatica 6,e6.devious.gg,25575,MCEnigmatica6',
+                            description: 'reboots Enigmatica 6',
+                            value: 'Enigmatica 6,77.68.118.63,25575,MCEnigmatica6',
                         },
                         {
-                            label: 'MedievalMC',
-                            description: 'reboots medievalMC',
-                            value: 'MedievalMC,medieval.devious.gg,25567,MedievalMC',
-                        },
-                        {
-                            label: 'Ragnamod 6',
-                            description: 'reboots ragnamod 6',
-                            value: 'Ragnamod 6,r6.devious.gg,25588,Ragnamod6v3',
+                            label: 'Cave Factory',
+                            description: 'reboots Cave Factory',
+                            value: 'Cave Factory,77.68.118.63,25569,MCCaveFactory',
                         },
                         {
                             label: 'Stacia Expert',
-                            description: 'reboots stacia expert',
-                            value: 'Stacia,stacia.devious.gg,25570,StaciaExpert',
+                            description: 'reboots Stacia Expert',
+                            value: 'Stacia Expert,77.68.118.63,25570,StaciaExpert',
+                        },
+                        {
+                            label: 'AOF5',
+                            description: 'reboots AOF5',
+                            value: 'AOF5,77.68.118.63,25566,AOF5',
+                        },
+                        {
+                            label: 'Ragnamod 6',
+                            description: 'reboots Ragnamod 6',
+                            value: 'Ragnamod 6,77.68.118.63,25588,Ragnamod6',
                         },
                     ]),
             );

@@ -1,6 +1,6 @@
-# reboot-bot
+# reboot-bot : Staff
 
-WIP bot to add a vote to reboot devious (minecraft community) servers
+WIP bot to add a fast reboot for devious staff (minecraft community)
 uses AMP API to control ADS controlled instances
 ## How to install and run
 
@@ -21,8 +21,6 @@ DISCORD_TOKEN=
 AMP_USER=
 AMP_PASSWORD=
 AMPIP=
-MIN_VOTES=
-GLOBAL_COOLDOWN_SECONDS=
 ```
 DISCORD_TOKEN is the bot discord token
 
@@ -31,10 +29,6 @@ AMP_USER is the AMP username
 AMP_PASSWORD is the AMP password
 
 AMPIP is the AMP ip address + port, example: 127.0.0.1:8080
-
-MIN_VOTES is the minimum number of votes to be used when servers are offline or have 0 players
-
-GLOBAL_COOLDOWN_SECONDS is the number in seconds of how much time should the bot sleep for
 
 ## Updating
 
@@ -50,5 +44,7 @@ to add a new server, append this right under ``addOptions``
 },
 ```
 do note that the comma at the end is important
+
+another note is that the ``ip,port`` are not important anymore in this fork, it's a leftover from the community bot, however, it could be handy to have in the future, so i left it there
 
 knowing this you can edit entries aswell
