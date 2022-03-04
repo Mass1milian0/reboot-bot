@@ -8,7 +8,7 @@ uses AMP API to control ADS controlled instances
 - clone this project into a folder
 - using a terminal navigate to that folder
 - run the command ``npm install``
-- once that is done, run the command ``node index.js``
+- once that is done, run the command ``npm start``
 - if you have done everything correctly you should get a message saying: `bot is ready to roll`
 
 ## Configuration
@@ -40,11 +40,9 @@ to add a new server, append this right under ``addOptions``
 {
     label: 'Name to show in context menu',
     description: 'description of the action',
-    value: 'same as label,ip,port,Instance name CASE SENSITIVE',
+    value: 'same as label,Instance name CASE SENSITIVE',
 },
 ```
 do note that the comma at the end is important
-
-another note is that the ``ip,port`` are not important anymore in this fork, it's a leftover from the community bot, however, it could be handy to have in the future, so i left it there
 
 knowing this you can edit entries aswell

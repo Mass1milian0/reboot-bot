@@ -56,8 +56,8 @@ client.on('interactionCreate', async interaction => {
         const values = interaction.values.toString().split(',')
         await interaction.update({ content: values[0] + " has been selected for reboot!", components: [], fetchReply: true });
         await interaction.deleteReply();
-        let followup = await interaction.followUp("Rebooting " + values[0] + " please wait")
-        await restartInstance(values[3])
+        let followup = await interaction.followUp(`Rebooting ${values[0]} please wait`)
+        await restartInstance(values[1])
         await followup.edit(`${values[0]} has been rebooted, please wait for server to start!`)
     }
 })
